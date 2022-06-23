@@ -1,0 +1,22 @@
+{
+  "format_version": "1.18.0",
+  "animation_controllers" : {
+    "controller.animation.player.spawn_checker" : {
+      "initial_state" : "default",
+      "states" : {
+        "default" : {
+          "transitions" : [
+            { "spawn_checker" : "v.attack_time > 0.1" }
+          ]
+        },
+        "spawn_checker" : {
+          "on_entry": ["@s e:spawn_checker"],
+          "on_exit": [],
+          "transitions" : [
+            { "default" : "!(v.attack_time > 0.1)" }
+          ]
+        }
+      }
+    }
+  }
+}

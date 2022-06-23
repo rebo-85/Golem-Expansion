@@ -1,0 +1,46 @@
+{
+	"type": "minecraftBedrock",
+	"name": "Golem Expansion",
+	"namespace": "rebo",
+	"authors": [
+		"ReBo"
+	],
+	"targetVersion": "1.18.30",
+	"description": "Addon for new custom golems that you can summon like a normal Iron Golem.",
+	"experimentalGameplay": {
+		"holidayCreatorFeatures": false,
+		"creationOfCustomBiomes": false,
+		"upcomingCreatorFeatures": false,
+		"enableGameTestFramework": false,
+		"experimentalMolangFeatures": false,
+		"theWildUpdate": false,
+		"educationEdition": false
+	},
+	"packs": {
+		"behaviorPack": "./BP",
+		"resourcePack": "./RP"
+	},
+	"worlds": [
+		"./worlds/*"
+	],
+	"compiler": {
+		"plugins": [
+			"typeScript",
+			"entityIdentifierAlias",
+			"customEntityComponents",
+			"customItemComponents",
+			"anyLanguage",
+			"loadJSON",
+			"customBlockComponents",
+			"customCommands",
+			"moLang",
+			"formatVersionCorrection",
+			[
+				"simpleRewrite",
+				{
+					"packName": "Golem Expansion"
+				}
+			]
+		]
+	}
+}

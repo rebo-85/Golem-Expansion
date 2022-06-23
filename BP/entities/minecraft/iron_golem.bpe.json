@@ -49,6 +49,23 @@
     },
 
     "components": {
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "projectile",
+            "on_damage": {
+              "filters": [
+                {
+                  "test": "is_family",
+                  "subject": "damager",
+                  "value": "checker"
+                }
+              ]
+            },
+            "deals_damage": false
+          }
+        ]
+      },
       "minecraft:is_hidden_when_invisible": {
       },
       "minecraft:type_family": {

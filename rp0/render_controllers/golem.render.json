@@ -1,0 +1,39 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.golem": {
+      "geometry": "Geometry.default",
+      "arrays": {
+        "textures": {
+          "Array.type": [
+            "Texture.amethyst_block",
+            "Texture.ancient_debris",
+            "Texture.bedrock",
+            "Texture.beehive",
+            "Texture.blackstone",
+            "Texture.blue_ice",
+            "Texture.bone_block",
+            "Texture.cobblestone",
+            "Texture.crimson_planks",
+            "Texture.crimson_stem",
+            "Texture.crying_obsidian",
+            "Texture.diamond_block",
+            "Texture.dirt"
+          ]
+        }
+      },
+      "materials": [{ "*": "Material.default" }],
+      "textures": ["Array.type[q.property('p:type')]"]
+    },
+    "controller.render.golem_cracks": {
+      "materials": [{ "*": "Material.default" }],
+      "arrays": {
+        "textures": {
+          "Array.cracks": ["Texture.cracked_high", "Texture.cracked_med", "Texture.cracked_low", "Texture.cracked_none"]
+        }
+      },
+      "geometry": "Geometry.default",
+      "textures": ["Array.cracks[math.clamp(query.health / (q.max_health/4), 0, 3)]"]
+    }
+  }
+}
